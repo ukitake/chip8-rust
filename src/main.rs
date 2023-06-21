@@ -1,9 +1,9 @@
 mod cpu;
 mod disassembler;
+mod keyboard;
 mod platform;
 mod rom;
 mod sdl_platform;
-mod keyboard;
 use cpu::{init_program, Runnable};
 use platform::{create_contexts, Platform};
 use sdl_platform::SdlPlatform;
@@ -14,12 +14,12 @@ extern crate lazy_static;
 
 fn main() -> Result<(), String> {
     let args: Vec<String> = env::args().collect();
-    if args.len() < 1 {
+    if args.len() < 2 {
         eprintln!("Missing file arg!");
         return Ok(());
     }
 
-    let file_name = "/home/ori/chip8-rust/test/Breakout.ch8";
+    let file_name = &args[1];
 
     let program_res = init_program(&file_name);
     if program_res.is_err() {
