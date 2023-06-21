@@ -1,6 +1,7 @@
 # chip8-rust
 
 This is a CHIP8 emulator written in Rust (first time using it).  It was developed in VS Code on Windows 11 using WSL.  
+![Screenshot 2023-06-21 015821](https://github.com/ukitake/chip8-rust/assets/3962773/1649b6b7-b81b-4a4d-af14-4147d2064239)
 
 ## Types
 
